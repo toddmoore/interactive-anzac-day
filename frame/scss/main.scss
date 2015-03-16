@@ -1,0 +1,149 @@
+@import "../../jspm_packages/npm/bourbon@4.2.1/app/assets/stylesheets/bourbon";
+@import "../../bower_components/guss-webfonts/src/webfonts";
+
+@include guss-webfonts();
+$background: #484848;
+$transition: 5s;
+$url: '../../frame/';
+html, body {
+  margin: 0;
+  body: 0;
+}
+.image-fader-controls {
+  width: 3.6rem;
+  position: absolute;
+  height: 100%;
+  background: #333333;
+  right: 0;
+  z-index: 3;
+  border-left:1px solid #767676;
+  .next, .prev {
+    width: 33px;
+    height: 33px;
+    cursor: pointer;
+    padding: .35rem;
+    background-color: #484848;
+    border-radius: 50%;
+    background-image: url($url+'images/back.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 31px 31px;
+    position: absolute;
+    z-index: 2;
+    display: block;
+    top: 7.5rem;
+    left: .4rem;
+    @include transition(background-color, 0.2s);
+    &:hover {
+      background-color: #787878;
+    }
+  }
+  .next {
+    background-image: url($url+'images/forward.svg');
+    margin-top: 3.6rem;
+  }
+}
+#image-fader-container {
+  opacity: 1;
+  @include transition-property(opacity);
+  @include transition-duration(1.0s);
+  @include transition-timing-function(ease-in);
+  @include transition-delay(0s);
+  width: calc(100wv - 3.6rem);
+  height: 100vh;
+  max-width: calc(100vw - 3.6rem);
+  max-height: 100vh;
+  top: 0;
+  left: 0;
+  overflow:hidden;
+  background: $background;
+  background-image: url($url+'images/oval.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  .inner {
+    height: 100vh;
+    @include display(flex);
+    @include align-items(center);
+    @include transition-property(transform);
+    @include transition-duration(0s);
+    @include transition-timing-function(ease-in-out);
+    @include transition-delay(0s);
+    &.noanimation {
+      @include transition-property(transform);
+      @include transition-duration(0s);
+      @include transition-timing-function(ease-in);
+      @include transition-delay(0s);
+    }
+    .before-image {
+      width: calc(100vw - 3.6rem);
+      position:relative;
+      z-index:2;
+      top:0px;
+      left:0px;
+    }
+    .after-image {
+      width: calc(100vw - 3.6rem);
+      position:absolute;
+      top:0px;
+      left:0px;
+      z-index:-1;
+      opacity:0;
+    }
+  }
+  .gdn-slider-item {
+    @include transform( translate3d(0,0,0) );
+    &:first-child {
+      @include transform( translate3d(0,0,0) );
+    }
+    .gdn-fader-slider {
+      img.before-image {
+        @include transition-property(opacity);
+        @include transition-duration(5.0s);
+        @include transition-timing-function(ease-in);
+        @include transition-delay(0s);
+      }
+      &.on {
+        img.before-image {
+          opacity: 0;
+        }
+        .interact-icon img {
+          opacity: 0;
+        }
+      }
+      &.ready {
+        .after-image {
+          opacity: 1 !important;
+        }
+        .interact-icon {
+          opacity: 1;
+        }
+      }
+      .interact-icon img {
+        opacity: 0.8;
+        width: 60px;
+        height: 60px;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -30px;
+        margin-top: -30px;
+        @include transition('opacity', 0s, ease);
+        @include transition-delay(1.5s);
+      }
+      .interact-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: block;
+        pointer-events: none;
+        opacity: 0;
+        z-index: 4;
+      }
+    }
+  }
+}
+
+@import 'guardian';

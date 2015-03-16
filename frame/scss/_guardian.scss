@@ -1,0 +1,67 @@
+.gallery-lightbox__btn {
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.gallery-lightbox__btn-body {
+  margin: auto;
+  background: #484848;
+  border: 0;
+  outline: none;
+  text-indent: -624.9375rem;
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+.gallery-lightbox__btn--close .gallery-lightbox__btn-body {
+  cursor: pointer;
+  width: 2.75rem;
+  height: 2.75rem;
+  -webkit-border-radius: 2.75rem;
+  border-radius: 2.75rem;
+  position: relative;
+  display: block;
+}
+.gallery-lightbox__btn--close .gallery-lightbox__btn-body:hover {
+    background-color: #787878;
+}
+.gallery-lightbox__btn--close .gallery-lightbox__btn-body i, .gallery-lightbox__btn--close .gallery-lightbox__btn-body .i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.svg .gallery-lightbox__btn--close .gallery-lightbox__btn-body i, .svg .gallery-lightbox__btn--close .gallery-lightbox__btn-body .i {
+  display: inline-block;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+}
+.svg .gallery-lightbox__btn--close .gallery-lightbox__btn-body i, .svg .gallery-lightbox__btn--close .gallery-lightbox__btn-body .i, .i-close-icon-white {
+  background-position: -6.4375rem -1.0625rem;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+.svg .gallery-lightbox__btn--close .gallery-lightbox__btn-body i, .svg .gallery-lightbox__btn--close .gallery-lightbox__btn-body .i, .svg .i-close-icon-white, .svg-i-close-icon-white {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTcuNSA5TDEgMmwxLTEgNyA2LjVMMTYgMWwxIDEtNi41IDcgNi41IDctMSAxLTctNi41TDIgMTdsLTEtMSA2LjUtN3oiLz48L3N2Zz4=);
+  background-position: 0 0;
+}
+.gallery-lightbox__progress {
+  color: #bdbdbd;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Guardian Text Sans Web","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+
+}
+.gallery-lightbox__progress--sidebar {
+  display: block;
+  text-align: center;
+  padding-top: 2.25rem;
+}
+.gallery-lightbox__progress-separator:after {
+  content: ' / ';
+  display: inline;
+}
