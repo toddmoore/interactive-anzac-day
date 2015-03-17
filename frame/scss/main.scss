@@ -17,6 +17,7 @@ html, body {
   right: 0;
   z-index: 3;
   border-left:1px solid #767676;
+  @include user-select(none);
   .next, .prev {
     width: 33px;
     height: 33px;

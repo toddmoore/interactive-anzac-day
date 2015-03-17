@@ -58,7 +58,6 @@ class ImageFaderUI extends ImageFader {
 	}
 
 
-
 }
 
 export default ImageFaderUI;

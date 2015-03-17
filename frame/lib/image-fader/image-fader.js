@@ -3,6 +3,9 @@ import TemplateFullScreen from './template-fullscreen';
 
 class ImageFader {
 	constructor() {
+		//the video selector
+		this.videoSelector = "gdn-video-";
+
 		//store callbacks
 		this.store = [];
 		// watch this object for changes
@@ -73,7 +76,7 @@ class ImageFader {
 		// Template class
 		// type is either video || image
 		var htmlString = ""
-		this.dataset.forEach((item) => {
+		this.dataset.forEach((item, index) => {
 			var template = new TemplateFullScreen(
 				item.beforeimage,
 				item.afterimage,
@@ -81,7 +84,8 @@ class ImageFader {
 				item.alttag,
 				item.caption,
 				item.credit,
-				item.type
+				item.type,
+				index
 			)
 			htmlString += template.template
 		});
@@ -94,11 +98,29 @@ class ImageFader {
 		// adds and removes a class
 		event.preventDefault();
 		var parent = event.target.parentNode;
+		var index = parseInt(parent.getAttribute("rel"));
+		var type = this.dataset[index].type;
+		var video = undefined;
+
+		// plays the video on click to save CPU computation
+		if (type == "video") {
+			video = document.getElementById(this.videoSelector + index);
+		}
+
 		if (parent.hasClass("on")) {
 			parent.removeClass("on");
+			setTimeout(function() {
+				if (video) {
+					video.pause()
+				}
+			}, 5000)
 		} else {
+			if (video) {
+				video.play()
+			}
 			parent.addClass("on");
 		}
+
 	}
 
 	addListeners() {

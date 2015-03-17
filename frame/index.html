@@ -9,9 +9,6 @@
 		<link rel="stylesheet" href="css/main.css"/>
 		<!-- CSS_END -->
 		<!-- JS_START -->
-
-
-
 		<title>Image fader</title>
 	</head>
 	<body>
@@ -29,98 +26,17 @@
 			<b class="prev"></b>
 		</div>
 		<div id="image-fader-container">
-			<div class="inner">
-
-			</div>
+			<div class="inner"></div>
 		</div>
 		<div class="image-fader-caption"></div>
 
-
 		<script src="http://interactive.guim.co.uk/libs/iframe-messenger/iframeMessenger.js" type="text/javascript"></script>
-
-		<script>
-
-		iframeMessenger.enableAutoResize();
-
-		// jQ(function() {
-		// window.currentIndex = 0;
-		// window.totalLength = 3;
-		// window.settotals = function(){
-		// 	jQ('.js-gallery-count').text(window.totalLength);
-		// }
-		//
-		//
-		//
-		// var el = window.el = jQ("#image-fader-container .inner");
-		// var links = document.querySelectorAll('a');
-		//
-    // 		for(var i = 0; i < links.length; i++) {
-    //     		links[i].addEventListener('click', function(event) {
-    //         		event.preventDefault();
-    //         		iframeMessenger.navigate(this.href);
-    //     		}, false);
-    // 		}
-		//
-		// //var app = new IMAGE_FADER.App();
-		//
-		// });
-		//
-		// var setCurrentIndex = function(increment){
-		// 	jQ('.js-gallery-index').text(currentIndex+increment+1);
-		// 	return currentIndex = currentIndex+increment;
-		// }
-		//
-		// window.loadCurrentIndex = function(){
-		// 	jQ('.js-gallery-index').text(currentIndex+1);
-		// 	jQ('.inner').addClass("noanimation")
-		// 	//el.css("transform", "translate3d(-"+currentIndex*100+"vw, 0,0)");
-		// 	setTimeout(function(){
-		// 		jQ('.inner').removeClass("noanimation");
-		// 	}, 1000)
-		// }
-		//
-		// jQuery(document).on("keydown", function(event){
-		// 	if(event.keyCode == 39){
-		// 		if(window.currentIndex != (window.totalLength)-1){
-		// 			setCurrentIndex(1);
-		// 			el.css("transform", "translate3d(calc(-"+currentIndex*100+"vw + "+3.6*currentIndex+"rem), 0,0)");
-		// 		}
-		// 	}
-		// 	if(event.keyCode == 37){
-		// 		if(window.currentIndex != 0){
-		// 			setCurrentIndex(-1);
-		// 			el.css("transform", "translate3d(calc(-"+currentIndex*100+"vw + "+3.6*currentIndex+"rem), 0,0)");
-		// 		}
-		// 	}
-		// });
-		//
-		// jQuery(".next").on("click", function(){
-		// 	if(window.currentIndex != (window.totalLength)-1){
-		// 		setCurrentIndex(1);
-		// 		el.css("transform", "translate3d(calc(-"+currentIndex*100+"vw + "+3.6*currentIndex+"rem), 0,0)");
-		// 	}
-		// });
-		//
-		// jQuery(".prev").on("click", function(){
-		// 	if(window.currentIndex != 0){
-		// 		setCurrentIndex(-1);
-		// 		el.css("transform", "translate3d(calc(-"+currentIndex*100+"vw + "+3.6*currentIndex+"rem), 0,0)");
-		// 	}
-		// });
-		//
-		// jQuery(".gallery-lightbox__btn--close button").on("click", function(event){
-		// 	event.preventDefault();
-		// 	iframeMessenger.navigate("#close-interactive");
-		// });
-
-
-
-		</script>
 		<script charset="utf-8" src="../jspm_packages/system.js"></script>
 		<script src="../config.js"></script>
 		<script>
 			System.map['json'] = '../json';
 			System.import("lib/index");
+			iframeMessenger.enableAutoResize();
 		</script>
 	</body>
 </html>
