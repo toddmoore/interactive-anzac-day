@@ -9,6 +9,7 @@ before_script:
 - npm install -g divshot-cli
 - jspm config endpoints.github.auth $JSPM_AUTH
 - jspm install
+- bower install
 - gulp build
 script:
 - karma start karma.conf.js --single-run
