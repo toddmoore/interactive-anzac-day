@@ -1,12 +1,27 @@
 language: node_js
 sudo: false
 node_js:
-  - "0.12"
+- '0.12'
 before_script:
-  - npm install -g jspm
-  - npm install -g karma-cli
-  - npm install -g divshot-cli
-  - jspm config endpoints.github.auth $JSPM_AUTH
-  - jspm install
+- npm install -g jspm
+- npm install --dev
+- npm install -g karma-cli
+- npm install -g divshot-cli
+- jspm config endpoints.github.auth $JSPM_AUTH
+- jspm install
+- gulp build
 script:
-  - karma start karma.conf.js --single-run
+- karma start karma.conf.js --single-run
+deploy:
+  provider: s3
+  access_key_id: AKIAIAK7BMN6OCOVQNSQ
+  secret_access_key:
+    secure: CueXks3D6vPpFFWiCIsEvi8pFoQtnO0hq6DzDsItgKdIK18V3fY2P/clUaRbj4kUU3K1sgLtC2JfDEpZdCvjE3TgxuVM4EtoTKHjnzVkzqrU/bFMIfjoLZfomyth6DF7bHEiZDh6xz2XSBWGN/bf1qxDh2f9D+im+dft74Lvvmg=
+  bucket: gdn-cdn
+  local-dir: build
+  upload-dir: embed/aus/2015/apr/anzac-then-and-now
+  acl: public_read
+  cache_control: "no-cache"
+  on:
+    repo: toddmoore/interactive-anzac-day
+    branch: master

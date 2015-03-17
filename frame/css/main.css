@@ -586,7 +586,7 @@ html, body {
     padding: .35rem;
     background-color: #484848;
     border-radius: 50%;
-    background-image: url('../../frame/images/back.svg');
+    background-image: url('../images/back.svg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 31px 31px;
@@ -601,7 +601,7 @@ html, body {
     .image-fader-controls .next:hover, .image-fader-controls .prev:hover {
       background-color: #787878; }
   .image-fader-controls .next {
-    background-image: url('../../frame/images/forward.svg');
+    background-image: url('../images/forward.svg');
     margin-top: 3.6rem; }
 
 #image-fader-container {
@@ -626,7 +626,7 @@ html, body {
   left: 0;
   overflow: hidden;
   background: #484848;
-  background-image: url('../../frame/images/oval.svg');
+  background-image: url('../images/oval.svg');
   background-repeat: no-repeat;
   background-position: center center; }
   #image-fader-container .inner {

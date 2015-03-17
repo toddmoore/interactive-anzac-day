@@ -3,3 +3,5 @@ jspm_packages
 bower_components
 build
 .DS_Store
+build.js
+build.js.map
