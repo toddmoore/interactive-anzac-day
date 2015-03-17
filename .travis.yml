@@ -21,7 +21,7 @@ deploy:
     secure: CueXks3D6vPpFFWiCIsEvi8pFoQtnO0hq6DzDsItgKdIK18V3fY2P/clUaRbj4kUU3K1sgLtC2JfDEpZdCvjE3TgxuVM4EtoTKHjnzVkzqrU/bFMIfjoLZfomyth6DF7bHEiZDh6xz2XSBWGN/bf1qxDh2f9D+im+dft74Lvvmg=
   bucket: gdn-cdn
   local-dir: build
-  upload-dir: embed/aus/2015/apr/anzac-then-and-now
+  upload-dir: next-gen/au/2015/apr/anzac-interactive
   acl: public_read
   cache_control: "no-cache"
   on:
