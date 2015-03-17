@@ -2,7 +2,7 @@
   "name": "interactive-anzac-day",
   "repository": "http://github.com/toddmoore/interactive-anzac-day",
   "registry": "jspm",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "main": "lib/index",
   "jspm": {
     "format": "es6",

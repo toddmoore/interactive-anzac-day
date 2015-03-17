@@ -33,7 +33,7 @@ define([], function() {
 			document.querySelector(".top-banner-ad-container").style.display = 'none';
 
 			el.setAttribute('src',
-				'http://interactive.guim.co.uk/next-gen/au/2015/apr/anzac-interactive/frame/index.html?anzac'
+				'http://interactive.guim.co.uk/next-gen/au/2015/apr/anzac-interactive/index.html?anzac'
 			);
 			el.setAttribute('frameBorder', '0');
 			el.setAttribute('scrolling', 'no');
