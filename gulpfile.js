@@ -36,7 +36,8 @@ gulp.task('build', ['styles'], function() {
       'jspm bundle-sfx --minify frame/lib/index',
       'cp -f ./build.js ./build/',
       'cp -rf ./frame/css ./build && cp -rf ./frame/images ./build/images',
-      'cp -f jspm_packages/traceur-runtime.js ./build'
+      'cp -f jspm_packages/traceur-runtime.js ./build',
+      'cp -f ./frame/boot.js ./build'
     ]));
 
   gulp.src('./frame/index.html')
