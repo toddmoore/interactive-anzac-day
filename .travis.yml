@@ -26,4 +26,4 @@ deploy:
   cache_control: "no-cache"
   on:
     repo: toddmoore/interactive-anzac-day
-    branch: /^.*$/
+    all_branches: true
