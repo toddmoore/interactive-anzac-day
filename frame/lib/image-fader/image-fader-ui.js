@@ -21,6 +21,10 @@ class ImageFaderUI extends ImageFader {
 		document.querySelector('.prev').addEventListener('click', (event) => {
 			this.handlePrev(event)
 		});
+		document.querySelection('.js-gallery-close').addEventListener('click', (
+			event) => {
+			this.closeGallery(event);
+		});
 		this.register(this.handleDataSetChanges, this);
 	}
 
@@ -54,6 +58,12 @@ class ImageFaderUI extends ImageFader {
 		if (this.currentIndex != 0) {
 			this.setIndex(-1);
 			this._transform();
+		}
+	}
+
+	closeGallery(event) {
+		if (window.iframeMessenger) {
+			iframeMessenger.navigate("#close-interactive");
 		}
 	}
 

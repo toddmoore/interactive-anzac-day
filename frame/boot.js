@@ -45,6 +45,7 @@ define([], function() {
 			el.style.left = "0";
 			el.style.zIndex = "10000000";
 			el.style.position = "absolute";
+			el.style.display = "none";
 
 			s.appendChild(el);
 
