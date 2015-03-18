@@ -21,10 +21,11 @@ class ImageFaderUI extends ImageFader {
 		document.querySelector('.prev').addEventListener('click', (event) => {
 			this.handlePrev(event)
 		});
-		document.querySelection('.js-gallery-close').addEventListener('click', (
+		document.querySelector('.js-gallery-close').addEventListener('click', (
 			event) => {
 			this.closeGallery(event);
 		});
+
 		this.register(this.handleDataSetChanges, this);
 	}
 
